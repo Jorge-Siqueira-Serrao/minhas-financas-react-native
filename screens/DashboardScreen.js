@@ -18,7 +18,7 @@ import { cores, espacamento } from '../theme';
 export function DashboardScreen({ navigation, route }) {
   const { transacoes, saldo, receitas, despesas, carregando, removerTransacao } = useTransacoes();
 
-  // Mantém o status bar claro enquanto o Dashboard está em foco (cabeçalho azul) — vindo da Aula 3
+  // Mantém o status bar claro enquanto o Dashboard está em foco (cabeçalho azul) — vindo da Aula 4
   useFocusEffect(
     React.useCallback(() => {
       setStatusBarStyle('light');
@@ -87,7 +87,7 @@ export function DashboardScreen({ navigation, route }) {
                 tipo={t.tipo}
                 categoria={t.categoria}
                 data={t.data}
-                // Navega para o detalhe (DetalheTransacaoScreen criada na Aula 3)
+                // Navega para o detalhe (DetalheTransacaoScreen criada na Aula 4)
                 onPress={() => navigation.navigate('DetalheTransacao', { transacao: t })}
                 onLongPress={() => confirmarExclusao(t.id, t.descricao)}
               />
@@ -119,4 +119,3 @@ const styles = StyleSheet.create({
   textoVazio: { fontSize: 17, fontWeight: '600', color: cores.subtexto },
   subtextoVazio: { fontSize: 13, color: '#bdc3c7', textAlign: 'center' },
 });
-

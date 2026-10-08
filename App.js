@@ -7,7 +7,7 @@ import { TransacoesProvider } from './context/TransacoesContext';
 import { BoasVindasScreen } from './screens/BoasVindasScreen';
 
 export default function App() {
-  // Mantém a navegação condicional da Aula 3 (tela de boas-vindas no primeiro acesso)
+  // Mantém a navegação condicional da Aula 4 (tela de boas-vindas no primeiro acesso)
   const [primeiroAcesso, setPrimeiroAcesso] = useState(true);
 
   if (primeiroAcesso) {
